@@ -1,0 +1,414 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'lato',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: black;
+    color: white;/*text color*/
+    padding: 20px;
+    padding-left: 50px;
+}
+.navTop{
+    display: flex;/*to keep the 3 items in one line*/
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    display: flex;/*adjusting the magnifing glass img to centre & in one line*/
+    align-items: center;
+    background-color: grey;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.searchInput{
+    background-color: transparent;
+    border: none;
+}
+.searchInput::placeholder{
+    color: whitesmoke;/*the text"search.." will be in white color*/
+}
+.limitedOffer{
+    font-size: 20px;
+    border-bottom: 2px solid aqua;
+    cursor: pointer;
+}
+.navBottom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.menuItem{
+    margin-right: 50px;
+    cursor: pointer;
+    color: rgb(252, 247, 247);
+    font-weight: 400;
+
+}
+.slider{
+    background: url("https://media.istockphoto.com/photos/black-brick-wall-background-texture-dark-masonry-picture-id915097804?s=612x612");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    overflow: hidden;/*for hiding the slide bar which was at the bottom */
+}
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;/* time for sliding the shoes 1s*/
+}
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.sliderBg{/*circle in background*/
+    width: 690px;
+    height: 680px;
+    right: 21%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: brown;
+}
+.sliderImg{
+    z-index: 1;
+    width: 600px;
+    height: 600px;
+}
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(250, 247, 247);
+    z-index: 1;
+}
+.sliderPrice{
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+    border: 1px solid grey;
+    z-index: 1;
+}
+.buyButton{
+    position: absolute;
+    top: 60%;/*adjusting loction */
+    left: 76%;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    background-color: black;
+    border: 1px solid grey;
+    z-index: 1;
+    cursor: pointer;
+}
+.buyButton:hover{
+    background-color: white;
+    color: black;
+}
+.sliderItem:nth-child(1) .sliderBg{
+    background-color: aqua;
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: rgb(10, 37, 37);
+}
+.sliderItem:nth-child(3) .sliderBg{
+    background-color: rgb(200, 213, 213);
+}
+.sliderItem:nth-child(4) .sliderBg{
+    background-color: rgb(66, 134, 134);
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: rgb(66, 95, 176);
+}
+.sliderItem:nth-child(1) .sliderPrice{
+    color: aqua;
+}
+.sliderItem:nth-child(2) .sliderPrice{
+    color: rgb(10, 37, 37);
+}
+.sliderItem:nth-child(3) .sliderPrice{
+    color: rgb(200, 213, 213);
+}
+.sliderItem:nth-child(4) .sliderPrice{
+    color: rgb(66, 134, 134);
+}
+.sliderItem:nth-child(5) .sliderPrice{
+    color: rgb(66, 95, 176);
+}
+.features{/*shipping, return,gift,contact*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.featureIcon{
+    width: 50px;
+    height: 50px;
+}
+.featureTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+.featureDesc{
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+/*product details,size, colour, discription*/
+.product{
+    height: 100vh;
+    background-color: rgb(226, 223, 223);
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+.payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    /*display: flex;       written in app.js */
+    display: none;
+   
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 13px 2px rgba(0, 0, 0, 0.3);
+  }
+  .payTitle {
+    font-size: 20px;
+    color: rgb(70, 70, 70);
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .payInput{
+      padding: 10px;
+      margin: 10px 0px;
+  }
+  .cardIcons {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .payInput.sm {
+    width: 30%;
+  }
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;/*after payment page*/
+    width: 100%;
+    left: 0;/*just below payment page & of same width */
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .payButton:hover{
+      background-color: #51ee08;
+  }
+  .close {
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+.close:hover{
+    background-color: black;
+}
+
+
+.productImg{
+    width: 49%;
+}
+.productDetails{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+.productTitle{
+    font-size: 75px;
+    font-weight: 900;
+}
+.productDesc{
+    font-style: 24px;
+    color: gray;
+
+}
+.colors,.sizes{
+    display: flex;
+    margin-bottom: 20px;
+}
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .color:last-child {
+    background-color: darkblue;
+  }
+  .size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 3px;
+  }
+  .productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }  
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+.gallery{
+  padding: 50px;
+  display: flex;
+}
+.galleryItem{
+  flex: 1;
+  padding: 50px;
+}
+.galleryImg{
+  width: 300px;
+  height: 500px;
+}
+.newSeason{
+  display: flex;
+
+}
+.nsItem{
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.nsImg{
+  width: 100%;
+  height: 500px;
+}
+
+.nsTitle{
+ font-size: 40px;
+}
+.nsButton{
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.footer{
+  display: flex;
+}
+
+.footerLeft{
+
+  display: flex;
+  flex:2;
+  justify-content:space-between;
+  padding: 50px;
+  margin: 10px;
+}
+  
+.footerRight{
+flex: 1;
+display: flex;
+padding: 50px;
+justify-content: right;
+flex-direction: column;
+}
+.fInput{
+  padding: 5px;
+}
+.fIcons{
+  display: flex;
+  cursor: pointer;
+}
+.fIcon{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+.copyright{
+font-weight: 300;
+font-size: 14px;
+}
+.fButton{
+  padding: 5px;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+  .fMenuTitle{
+    font-size: 16px;
+  }
+  .fList{
+    padding: 0;
+    list-style: none;
+  }
+  .fListItem{
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+  }
